@@ -19,23 +19,21 @@
             background: #1a120b url('https://www.transparenttextures.com/patterns/dark-leather.png');
             font-family: 'EB Garamond', serif;
             color: var(--ink);
-            padding: 30px; /* Tăng khoảng cách lề ngoài */
+            padding: 30px;
             min-height: 100vh;
             display: flex;
             justify-content: center;
         }
 
-        /* --- PHÓNG TO KHUNG HÌNH CHÍNH --- */
         .main-wrapper {
             display: grid;
-            grid-template-columns: 350px 1fr; /* Mở rộng sidebar trái */
-            gap: 40px; /* Tăng khoảng cách giữa 2 cột */
-            width: 95%; /* Chiếm 95% chiều rộng màn hình */
-            max-width: 1800px; /* Giới hạn tối đa cho màn hình siêu rộng */
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            width: 95%;
+            max-width: 1800px;
             margin: 0 auto;
         }
 
-        /* SIDEBAR - TÀNG KINH CÁC */
         .sidebar {
             background: var(--parchment) url('https://www.transparenttextures.com/patterns/paper.png');
             padding: 40px 30px;
@@ -50,7 +48,7 @@
         .sidebar h2 {
             font-family: 'Dancing Script', cursive;
             color: var(--sepia);
-            font-size: 2.2rem; /* Phóng to tiêu đề sidebar */
+            font-size: 2.2rem;
             margin-bottom: 30px;
             border-bottom: 2px solid var(--sepia);
             text-align: center;
@@ -69,6 +67,37 @@
             padding-left: 15px;
         }
 
+        /* --- PHẦN GIỚI THIỆU THÀNH VIÊN --- */
+        .member-info {
+            background: rgba(112, 66, 20, 0.05);
+            border: 1px dashed var(--accent);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .member-name {
+            font-weight: bold;
+            color: #8b0000;
+            display: block;
+            font-size: 1.15rem;
+        }
+        .member-role {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            display: block;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .platform-tag {
+            font-size: 0.85rem;
+            text-align: center;
+            display: block;
+            margin-top: 15px;
+            color: var(--sepia);
+            border-top: 1px solid rgba(112, 66, 20, 0.2);
+            padding-top: 10px;
+        }
+
         .quick-menu { list-style: none; }
         .quick-menu li {
             padding: 12px 15px;
@@ -77,7 +106,7 @@
             border: 1px solid transparent;
             cursor: pointer;
             transition: 0.3s;
-            font-size: 1.1rem; /* Phóng to chữ menu */
+            font-size: 1.1rem;
         }
         .quick-menu li:hover {
             border-color: var(--sepia);
@@ -85,13 +114,12 @@
             padding-left: 20px;
         }
 
-        /* KHU VỰC GIẤY VIẾT CHÍNH */
         .paper-container {
             background: var(--parchment) url('https://www.transparenttextures.com/patterns/paper.png');
-            padding: 60px 100px; /* Tăng padding cực đại cho không gian sang trọng */
+            padding: 60px 100px;
             box-shadow: 0 0 70px rgba(0,0,0,0.8);
             border-radius: 4px;
-            min-height: 90vh; /* Cao gần hết màn hình */
+            min-height: 90vh;
         }
 
         header { 
@@ -102,7 +130,7 @@
         }
         header h1 { 
             font-family: 'Dancing Script', cursive; 
-            font-size: 4.5rem; /* Tiêu đề cực đại */
+            font-size: 4.5rem; 
             color: var(--sepia); 
         }
         header p { font-size: 1.3rem; font-style: italic; margin-top: 10px; }
@@ -111,7 +139,7 @@
         .mode-option { 
             background: rgba(112, 66, 20, 0.08); 
             border: 1px solid var(--sepia); 
-            padding: 12px 25px; /* Nút bấm to hơn */
+            padding: 12px 25px; 
             border-radius: 30px; 
             cursor: pointer; 
             font-size: 1.1rem; 
@@ -123,15 +151,14 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        /* KHUNG NHẬP LIỆU PHÓNG TO */
         textarea {
             width: 100%; 
-            height: 450px; /* Tăng chiều cao đáng kể */
+            height: 450px; 
             background: transparent; 
             border: none;
             font-family: 'EB Garamond', serif; 
-            font-size: 1.6rem; /* Chữ to, rõ ràng */
-            line-height: 2.8rem; /* Dòng kẻ thưa, dễ đọc */
+            font-size: 1.6rem; 
+            line-height: 2.8rem; 
             padding: 20px; 
             color: var(--ink); 
             resize: none;
@@ -158,18 +185,16 @@
         #analyzeBtn { border-color: #8b0000; color: #8b0000; }
         #analyzeBtn:hover { background: #8b0000; color: white; }
 
-        /* KẾT QUẢ PHÂN TÍCH */
         #resultArea { display: none; margin-top: 50px; border-top: 2px solid var(--sepia); padding-top: 40px; }
         .result-card { padding: 40px; background: rgba(255,255,255,0.2); border-left: 8px solid var(--sepia); }
         .result-card h3 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: var(--sepia); margin-bottom: 25px; }
         .result-content { 
-            font-size: 1.5rem; /* Chữ kết quả to và rõ */
+            font-size: 1.5rem; 
             line-height: 2.2; 
             text-align: justify; 
             white-space: pre-wrap; 
         }
 
-        /* Responsive cho máy tính bảng/điện thoại */
         @media (max-width: 1200px) {
             .main-wrapper { grid-template-columns: 1fr; width: 98%; }
             .sidebar { position: static; width: 100%; }
@@ -182,6 +207,20 @@
 <div class="main-wrapper">
     <aside class="sidebar">
         <h2>Tàng Kinh Các</h2>
+        
+        <div class="sidebar-section">
+            <h3>Ban Điều Hành</h3>
+            <div class="member-info">
+                <span class="member-name">Đỗ Ngọc Phát</span>
+                <span class="member-role">Vai trò: Trực tiếp xây dựng trang web và thiết lập hệ thống.</span>
+            </div>
+            <div class="member-info">
+                <span class="member-name">Lê Anh Thư</span>
+                <span class="member-role">Vai trò: Hỗ trợ trải nghiệm, thẩm định và đưa ra hướng khắc phục.</span>
+            </div>
+            <small class="platform-tag"><i>Xây dựng trên nền tảng Gemini AI</i></small>
+        </div>
+
         <div class="sidebar-section">
             <h3>Phân tích chuyên sâu</h3>
             <ul class="quick-menu" id="deepAnalysisMenu">
@@ -201,7 +240,7 @@
         </div>
         <div class="sidebar-section">
             <h3>Ghi chú học giả</h3>
-            <textarea style="width:100%; height:150px; background:rgba(255,255,255,0.3); border:1px solid var(--accent); padding:15px; font-family:serif; font-size:1.1rem;" placeholder="Ghi lại nhận định..."></textarea>
+            <textarea style="width:100%; height:100px; background:rgba(255,255,255,0.3); border:1px solid var(--accent); padding:15px; font-family:serif; font-size:1.1rem;" placeholder="Ghi lại nhận định..."></textarea>
         </div>
     </aside>
 
@@ -235,8 +274,9 @@
 </div>
 
 <script>
+    // Lưu ý: Hãy dùng Model 1.5 để ổn định hơn nếu 2.5 chưa khả dụng
     const API_KEY = "AIzaSyD1mFWfv_LS1AZlG3AseRv794-1LkKxSms";
-    const MODEL_NAME = "gemini-2.5-flash";
+    const MODEL_NAME = "gemini-2.5-flash"; 
     let currentMode = 'full';
 
     document.querySelectorAll('.mode-option').forEach(opt => {
@@ -296,7 +336,6 @@
         
         const res = await callAI(input);
         
-        // BỘ LỘC LÀM SẠCH VĂN BẢN (Xóa ký tự định dạng Markdown dư thừa)
         const cleanRes = res.replace(/[#*]/g, '').trim();
 
         document.getElementById('resultContent').innerText = cleanRes;
@@ -313,5 +352,4 @@
 </script>
 
 </body>
-
 </html>
