@@ -19,7 +19,7 @@
             background: #1a120b url('https://www.transparenttextures.com/patterns/dark-leather.png');
             font-family: 'EB Garamond', serif;
             color: var(--ink);
-            padding: 30px;
+            padding: 2vw;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -27,21 +27,21 @@
 
         .main-wrapper {
             display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 40px;
-            width: 95%;
-            max-width: 1800px;
+            grid-template-columns: minmax(300px, 350px) 1fr;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1600px;
             margin: 0 auto;
         }
 
         .sidebar {
             background: var(--parchment) url('https://www.transparenttextures.com/patterns/paper.png');
-            padding: 40px 30px;
+            padding: 2rem 1.5rem;
             border-radius: 4px;
             box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
             height: fit-content;
             position: sticky;
-            top: 30px;
+            top: 2vw;
             border: 1px solid var(--accent);
         }
 
@@ -49,29 +49,28 @@
             font-family: 'Dancing Script', cursive;
             color: var(--sepia);
             font-size: 2.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 1.5rem;
             border-bottom: 2px solid var(--sepia);
             text-align: center;
             padding-bottom: 10px;
         }
 
-        .sidebar-section { margin-bottom: 35px; }
+        .sidebar-section { margin-bottom: 2rem; }
 
         .sidebar-section h3 {
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
             color: #8b0000;
             border-left: 4px solid #8b0000;
             padding-left: 15px;
         }
 
-        /* --- PHẦN GIỚI THIỆU THÀNH VIÊN --- */
         .member-info {
             background: rgba(112, 66, 20, 0.05);
             border: 1px dashed var(--accent);
-            padding: 15px;
+            padding: 12px;
             margin-bottom: 10px;
             border-radius: 4px;
         }
@@ -79,7 +78,7 @@
             font-weight: bold;
             color: #8b0000;
             display: block;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
         }
         .member-role {
             font-size: 0.95rem;
@@ -100,15 +99,15 @@
 
         .quick-menu { list-style: none; }
         .quick-menu li {
-            padding: 12px 15px;
-            margin-bottom: 10px;
+            padding: 10px 15px;
+            margin-bottom: 8px;
             background: rgba(112, 66, 20, 0.05);
             border: 1px solid transparent;
             cursor: pointer;
             transition: 0.3s;
             font-size: 1.1rem;
         }
-        .quick-menu li:hover {
+        .quick-menu li:hover, .quick-menu li.active {
             border-color: var(--sepia);
             background: rgba(112, 66, 20, 0.1);
             padding-left: 20px;
@@ -116,30 +115,32 @@
 
         .paper-container {
             background: var(--parchment) url('https://www.transparenttextures.com/patterns/paper.png');
-            padding: 60px 100px;
+            padding: 4rem clamp(20px, 5vw, 80px);
             box-shadow: 0 0 70px rgba(0,0,0,0.8);
             border-radius: 4px;
             min-height: 90vh;
+            display: flex;
+            flex-direction: column;
         }
 
         header { 
             text-align: center; 
-            margin-bottom: 40px; 
+            margin-bottom: 2.5rem; 
             border-bottom: 3px double var(--sepia); 
-            padding-bottom: 25px; 
+            padding-bottom: 1.5rem; 
         }
         header h1 { 
             font-family: 'Dancing Script', cursive; 
-            font-size: 4.5rem; 
+            font-size: clamp(2.5rem, 4vw, 4.5rem);
             color: var(--sepia); 
         }
-        header p { font-size: 1.3rem; font-style: italic; margin-top: 10px; }
+        header p { font-size: 1.2rem; font-style: italic; margin-top: 10px; }
 
-        .feature-selector { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+        .feature-selector { display: flex; justify-content: center; gap: 15px; margin-bottom: 2.5rem; flex-wrap: wrap; }
         .mode-option { 
             background: rgba(112, 66, 20, 0.08); 
             border: 1px solid var(--sepia); 
-            padding: 12px 25px; 
+            padding: 10px 20px; 
             border-radius: 30px; 
             cursor: pointer; 
             font-size: 1.1rem; 
@@ -153,52 +154,69 @@
 
         textarea {
             width: 100%; 
-            height: 450px; 
+            min-height: 400px;
+            flex-grow: 1;
             background: transparent; 
             border: none;
             font-family: 'EB Garamond', serif; 
             font-size: 1.6rem; 
             line-height: 2.8rem; 
-            padding: 20px; 
+            padding: 0px 20px 10px 20px; 
             color: var(--ink); 
             resize: none;
-            background-image: linear-gradient(transparent 97%, rgba(112, 66, 20, 0.15) 98%);
+            background-image: linear-gradient(transparent 95%, rgba(112, 66, 20, 0.15) 96%);
             background-size: 100% 2.8rem;
+            background-position: 0 0.4rem; 
+            background-attachment: local;
         }
+
         textarea:focus { outline: none; }
 
-        .controls { display: flex; justify-content: center; gap: 30px; margin-top: 40px; }
+        .controls { display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
         button { 
-            padding: 15px 50px; 
+            padding: 12px 30px; 
             font-family: 'EB Garamond', serif; 
-            font-size: 1.2rem; 
+            font-size: 1rem; 
             font-weight: bold; 
             cursor: pointer; 
             border: 2px solid var(--sepia); 
             background: transparent; 
             color: var(--sepia); 
             text-transform: uppercase; 
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             transition: 0.4s;
         }
         button:hover { background: var(--sepia); color: var(--parchment); }
         #analyzeBtn { border-color: #8b0000; color: #8b0000; }
         #analyzeBtn:hover { background: #8b0000; color: white; }
+        
+        #printBtn { border-color: #2c1e14; color: #2c1e14; display: none; }
+        #printBtn:hover { background: #2c1e14; color: var(--parchment); }
 
-        #resultArea { display: none; margin-top: 50px; border-top: 2px solid var(--sepia); padding-top: 40px; }
-        .result-card { padding: 40px; background: rgba(255,255,255,0.2); border-left: 8px solid var(--sepia); }
-        .result-card h3 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: var(--sepia); margin-bottom: 25px; }
+        #resultArea { display: none; margin-top: 3rem; border-top: 2px solid var(--sepia); padding-top: 2.5rem; }
+        .result-card { padding: 2rem; background: rgba(255,255,255,0.1); border-left: 8px solid var(--sepia); }
+        .result-card h3 { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: var(--sepia); margin-bottom: 1.5rem; }
         .result-content { 
-            font-size: 1.5rem; 
+            font-size: 1.4rem; 
             line-height: 2.2; 
             text-align: justify; 
             white-space: pre-wrap; 
         }
 
-        @media (max-width: 1200px) {
-            .main-wrapper { grid-template-columns: 1fr; width: 98%; }
+        @media print {
+            body { background: white !important; padding: 0; }
+            .sidebar, .feature-selector, .controls, header p { display: none !important; }
+            .main-wrapper { display: block; width: 100%; }
+            .paper-container { box-shadow: none !important; padding: 20px !important; background: white !important; min-height: auto !important;}
+            #inputText { display: none; }
+            #resultArea { display: block !important; border: none; margin: 0; padding: 0; }
+            .result-card { background: transparent !important; border-left: 2px solid var(--sepia); }
+        }
+
+        @media (max-width: 1100px) {
+            .main-wrapper { grid-template-columns: 1fr; }
             .sidebar { position: static; width: 100%; }
-            .paper-container { padding: 40px; }
+            .paper-container { padding: 2rem 1.5rem; }
         }
     </style>
 </head>
@@ -207,7 +225,6 @@
 <div class="main-wrapper">
     <aside class="sidebar">
         <h2>Tàng Kinh Các</h2>
-        
         <div class="sidebar-section">
             <h3>Ban Điều Hành</h3>
             <div class="member-info">
@@ -229,6 +246,7 @@
                 <li data-mode="compare">⚖️ Đối chiếu văn học</li>
             </ul>
         </div>
+        
         <div class="sidebar-section">
             <h3>Tác phẩm tiêu biểu</h3>
             <ul class="quick-menu" id="sampleBooks">
@@ -237,10 +255,6 @@
                 <li>Vợ Nhặt - Kim Lân</li>
                 <li>Lão Hạc - Nam Cao</li>
             </ul>
-        </div>
-        <div class="sidebar-section">
-            <h3>Ghi chú học giả</h3>
-            <textarea style="width:100%; height:100px; background:rgba(255,255,255,0.3); border:1px solid var(--accent); padding:15px; font-family:serif; font-size:1.1rem;" placeholder="Ghi lại nhận định..."></textarea>
         </div>
     </aside>
 
@@ -262,6 +276,7 @@
         <div class="controls">
             <button id="clearBtn">Tẩy xóa</button>
             <button id="analyzeBtn">Khai bút Phân tích</button>
+            <button id="printBtn">Lưu Điển Tích</button>
         </div>
 
         <div id="resultArea">
@@ -274,28 +289,37 @@
 </div>
 
 <script>
-    // Lưu ý: Hãy dùng Model 1.5 để ổn định hơn nếu 2.5 chưa khả dụng
-    const API_KEY = "AIzaSyD1mFWfv_LS1AZlG3AseRv794-1LkKxSms";
+    const API_KEY = "AIzaSyAo1ni3xduolUiBESxP6WlmyVScFXVJMR8";
     const MODEL_NAME = "gemini-2.5-flash"; 
     let currentMode = 'full';
 
+    // Hàm cập nhật trạng thái Active cho các nút
+    function updateActiveState(selectedElement) {
+        document.querySelectorAll('.mode-option, .quick-menu li').forEach(el => el.classList.remove('active'));
+        selectedElement.classList.add('active');
+    }
+
+    // Xử lý khi chọn chế độ ở Menu chính
     document.querySelectorAll('.mode-option').forEach(opt => {
         opt.addEventListener('click', () => {
-            document.querySelectorAll('.mode-option, .quick-menu li').forEach(o => o.classList.remove('active'));
-            opt.classList.add('active');
             currentMode = opt.dataset.mode;
+            updateActiveState(opt);
         });
     });
 
+    // Xử lý khi chọn "Phân tích chuyên sâu" ở Sidebar
     document.querySelectorAll('#deepAnalysisMenu li').forEach(li => {
         li.addEventListener('click', () => {
-            document.querySelectorAll('.mode-option, .quick-menu li').forEach(o => o.classList.remove('active'));
-            li.classList.add('active');
             currentMode = li.dataset.mode;
-            if(document.getElementById('inputText').value.trim()) document.getElementById('analyzeBtn').click();
+            updateActiveState(li);
+            // Nếu đã có văn bản thì tự động chạy phân tích luôn cho tiện
+            if(document.getElementById('inputText').value.trim()) {
+                document.getElementById('analyzeBtn').click();
+            }
         });
     });
 
+    // Xử lý chọn tác phẩm mẫu
     document.querySelectorAll('#sampleBooks li').forEach(li => {
         li.addEventListener('click', () => {
             document.getElementById('inputText').value = li.innerText;
@@ -305,17 +329,15 @@
     async function callAI(text) {
         let task = "";
         switch(currentMode) {
-            case 'context': task = "Hãy phân tích hoàn cảnh sáng tác và bối cảnh lịch sử, xã hội ảnh hưởng đến nội dung tác phẩm."; break;
-            case 'art': task = "Hãy phân tích các giá trị nghệ thuật (ngôn từ, hình ảnh, bút pháp) đặc sắc của tác phẩm."; break;
-            case 'character': task = "Hãy phân tích tâm lý và hình tượng nhân vật chính."; break;
-            case 'philosophy': task = "Hãy phân tích tư tưởng, thông điệp nhân văn ẩn sau tác phẩm."; break;
-            case 'translate': task = "Hãy dịch tác phẩm này sang tiếng Việt hiện đại mượt mà."; break;
-            case 'compare': task = "Hãy đối chiếu tác phẩm này với các trào lưu hoặc tác phẩm cùng thời."; break;
-            default: task = "Hãy phân tích toàn diện bao gồm: Hoàn cảnh sáng tác, Tóm tắt nội dung và Giá trị tư tưởng.";
+            case 'context': task = "Hãy phân tích chi tiết hoàn cảnh sáng tác và bối cảnh lịch sử, xã hội ảnh hưởng đến nội dung tác phẩm."; break;
+            case 'art': task = "Hãy phân tích sâu các giá trị nghệ thuật (ngôn từ, hình ảnh, bút pháp) đặc sắc của tác phẩm."; break;
+            case 'character': task = "Hãy phân tích tâm lý và hình tượng nhân vật chính một cách sâu sắc."; break;
+            case 'philosophy': task = "Hãy phân tích tư tưởng, thông điệp nhân văn và triết lý ẩn sau tác phẩm."; break;
+            case 'translate': task = "Hãy dịch tác phẩm này sang tiếng Việt hiện đại mượt mà, giữ nguyên tinh thần văn chương."; break;
+            case 'compare': task = "Hãy đối chiếu tác phẩm này với các trào lưu hoặc tác phẩm cùng thời để thấy điểm riêng biệt."; break;
+            default: task = "Hãy phân tích toàn diện bao gồm: Hoàn cảnh sáng tác, Tóm tắt nội dung và Giá trị tư tưởng/nghệ thuật.";
         }
-
         const prompt = `Bạn là một học giả phê bình văn học lỗi lạc. Nhiệm vụ: ${task}\n\nTác phẩm: ${text}`;
-
         try {
             const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`, {
                 method: 'POST',
@@ -324,30 +346,29 @@
             });
             const data = await response.json();
             return data.candidates[0].content.parts[0].text;
-        } catch (e) { return "Lỗi kết nối điển tích."; }
+        } catch (e) { return "Lỗi kết nối điển tích. Quý nhân vui lòng kiểm tra lại đường truyền."; }
     }
 
     document.getElementById('analyzeBtn').addEventListener('click', async () => {
         const input = document.getElementById('inputText').value.trim();
         if(!input) return;
-
         const btn = document.getElementById('analyzeBtn');
         btn.innerText = "⏳ Đang soi chiếu...";
-        
         const res = await callAI(input);
-        
         const cleanRes = res.replace(/[#*]/g, '').trim();
-
         document.getElementById('resultContent').innerText = cleanRes;
         document.getElementById('resultArea').style.display = 'block';
+        document.getElementById('printBtn').style.display = 'inline-block';
         btn.innerText = "Khai bút Phân tích";
-        
         document.getElementById('resultArea').scrollIntoView({ behavior: 'smooth' });
     });
+
+    document.getElementById('printBtn').addEventListener('click', () => { window.print(); });
 
     document.getElementById('clearBtn').addEventListener('click', () => {
         document.getElementById('inputText').value = "";
         document.getElementById('resultArea').style.display = 'none';
+        document.getElementById('printBtn').style.display = 'none';
     });
 </script>
 
